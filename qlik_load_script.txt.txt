@@ -1,0 +1,65 @@
+// ==========================================
+// 1. CITIES TABLOSU KODLARI
+// ==========================================
+cities:
+LOAD 
+    City,
+    "City Code",
+    If(Match(Region, 'Germany', 'Spain', 'UK'), 'Europe', Region) as Region,
+    Latitude,
+    Longitude,
+    "Desc"
+FROM [lib://DataFiles/Cities.xlsx] (ooxml, embedded labels, table is Cities);
+
+
+// ==========================================
+// 2. CUSTOMER TABLOSU KODLARI
+// ==========================================
+customer:
+LOAD 
+    Customer,
+    "Customer Number",
+    "Line of Business",
+    If(IsNull([Region Code]) or [Region Code] = '', 'Europe',
+        If([Region Code] = 0, 'Other',
+            Pick(Match([Region Code], 1, 2, 3, 4, 5), 'Nordic', 'Europe', 'USA', 'Asia', 'Japan')
+        )
+    ) as Region,
+    "Region Code"
+FROM [lib://DataFiles/Customers.xlsx] (ooxml, embedded labels, table is Sheet1);
+
+
+// ==========================================
+// 3. TAKVİM (CALENDAR) TABLOSU KODLARI
+// ==========================================
+TempTarih:
+LOAD
+    Date(Min("Date")) as MinDate,
+    Date(Max("Date")) as MaxDate
+Resident [sales];
+
+Let vMinDate = Num(Peek('MinDate', 0, 'TempTarih'));
+Let vMaxDate = Num(Peek('MaxDate', 0, 'TempTarih'));
+
+Drop Table TempTarih;
+
+
+gecicitakvim:
+LOAD
+    $(vMinDate) + IterNo() - 1 as NumTarih,
+    Date($(vMinDate) + IterNo() - 1) as GeciciTarih
+AutoGenerate 1
+While $(vMinDate) + IterNo() - 1 <= $(vMaxDate);
+
+
+MasterCalender:
+LOAD
+    GeciciTarih as "Date",
+    Year(GeciciTarih) as Year,
+    'Q' & Num(Ceil(Month(GeciciTarih)/3)) as Quarter,
+    Month(GeciciTarih) as Month,
+    Week(GeciciTarih) as Week,
+    Year(GeciciTarih) & '-' & Month(GeciciTarih) as YearMonth
+Resident gecicitakvim;
+
+Drop Table gecicitakvim;
