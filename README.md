@@ -30,11 +30,10 @@ Core algorithms used during the data loading and cleaning stage (within `qlik_lo
 * 💻 ETL Source Code: [qlik_load_script.txt](https://github.com/melikekara3/Enterprise-Sales-Performance-Analytics/blob/main/qlik_load_script.txt)
 * 📦 Qlik Source App: [sales_performance_analysis.qvf](https://github.com/melikekara3/Enterprise-Sales-Performance-Analytics/blob/main/sales_performance_analysis.qvf)
 * 📊 Executive Summary Report: [Dashboard.pdf](https://github.com/melikekara3/Enterprise-Sales-Performance-Analytics/blob/main/Dashboard.pdf)
-* 🛍️ Product Analytics Report: [Product Details.pdf](https://github.com/melikekara3/Enterprise-Sales-Performance-Analytics/blob/main/Product_Details.pdf)
-* 👥 Customer Analytics Report:[Customer Details.pdf](https://github.com/melikekara3/Enterprise-Sales-Performance-Analytics/blob/main/Customer_Details.pdf)
-* 🗺️ Geographic Location Report: [Customer Location.pdf](https://github.com/melikekara3/Enterprise-Sales-Performance-Analytics/blob/main/Customer_Location.pdf)
-* 📈 Data Storytelling Report: [story telling.pdf](https://github.com/melikekara3/Enterprise-Sales-Performance-Analytics/blob/main/story_telling.pdf)
-## 📦 Opening the .qvf File
+* 🛍️ Product Analytics Report: [Product Details.pdf](https://github.com/melikekara3/Enterprise-Sales-Performance-Analytics/blob/main/Product%20Details.pdf)
+* 👥 Customer Analytics Report: [Customer Details.pdf](https://github.com/melikekara3/Enterprise-Sales-Performance-Analytics/blob/main/Customer%20Details.pdf)
+* 🗺️ Geographic Location Report: [Customer Location.pdf](https://github.com/melikekara3/Enterprise-Sales-Performance-Analytics/blob/main/Customer%20Location.pdf)
+* 📈 Data Storytelling Report: [story telling.pdf](https://github.com/melikekara3/Enterprise-Sales-Performance-Analytics/blob/main/story%20telling.pdf)## 📦 Opening the .qvf File
 
 GitHub does not support previewing `.qvf` files in the browser (due to file size and format limitations). To view the app:
 
