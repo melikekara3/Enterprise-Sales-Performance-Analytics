@@ -37,4 +37,4 @@ Veri yükleme ve temizleme aşamasında (`qlik_load_script.txt` içinde) kullan�
 - 🛍️ **Ürün Analitiği Raporu:** [Product Details.pdf](./Product%20Details.pdf)
 - 👥 **Müşteri Analitiği Raporu:** [Customer Details.pdf](./Customer%20Details.pdf)
 - 🗺️ **Coğrafi Konum Raporu:** [Customer Location.pdf](./Customer%20Location.pdf)
-- 📈 **Veri Hikayeleştirme Raporu:** [story telling.pdf](./story%20telling.pdf)[cite: 3]
+- 📈 **Veri Hikayeleştirme Raporu:** [story telling.pdf](./story%20telling.pdf)
